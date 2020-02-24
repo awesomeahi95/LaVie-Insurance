@@ -2,28 +2,17 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 2,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 1,
+   "metadata": {},
    "outputs": [],
    "source": [
-    "import pandas as pd\n",
-    "import numpy as np\n",
-    "from sklearn import linear_model\n",
-    "import statsmodels.api as sm\n",
-    "import matplotlib.pyplot as plt\n",
-    "from statsmodels.stats.outliers_influence import variance_inflation_factor\n",
-    "import statsmodels.api as sm\n",
-    "import scipy.stats as stats"
+    "import pandas as pd"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 3,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 2,
+   "metadata": {},
    "outputs": [],
    "source": [
     "pd.set_option('display.max_columns',None)\n",
@@ -32,10 +21,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 4,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 3,
+   "metadata": {},
    "outputs": [],
    "source": [
     "df = pd.read_csv(\"analytic_data2019.csv\", low_memory=False)"
@@ -43,10 +30,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 5,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 4,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -54,7 +39,7 @@
        "(3195, 534)"
       ]
      },
-     "execution_count": 5,
+     "execution_count": 4,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -65,10 +50,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 6,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 5,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -2892,7 +2875,7 @@
        "1                         NaN  "
       ]
      },
-     "execution_count": 6,
+     "execution_count": 5,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -2903,10 +2886,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 7,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 6,
+   "metadata": {},
    "outputs": [],
    "source": [
     "cicols = []\n",
@@ -2917,10 +2898,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 8,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 7,
+   "metadata": {},
    "outputs": [],
    "source": [
     "df_clean1 = df.drop(cicols, axis=1)"
@@ -2928,10 +2907,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 9,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 8,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -4140,7 +4117,7 @@
        "4                         NaN  "
       ]
      },
-     "execution_count": 9,
+     "execution_count": 8,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4151,10 +4128,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 10,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 9,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -4162,7 +4137,7 @@
        "(3195, 119)"
       ]
      },
-     "execution_count": 10,
+     "execution_count": 9,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4173,10 +4148,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 11,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 10,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -4237,7 +4210,7 @@
        "dtype: int64"
       ]
      },
-     "execution_count": 11,
+     "execution_count": 10,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4248,10 +4221,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 12,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 11,
+   "metadata": {},
    "outputs": [],
    "source": [
     "null_cols = []\n",
@@ -4262,10 +4233,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 13,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 12,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -4309,7 +4278,7 @@
        "      dtype='object')"
       ]
      },
-     "execution_count": 13,
+     "execution_count": 12,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4320,10 +4289,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 14,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 13,
+   "metadata": {},
    "outputs": [],
    "source": [
     "df_clean1 = df_clean1.drop(null_cols, axis=1)"
@@ -4331,10 +4298,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 15,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 14,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -4342,7 +4307,7 @@
        "(3195, 66)"
       ]
      },
-     "execution_count": 15,
+     "execution_count": 14,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4353,10 +4318,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 16,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 15,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -4728,7 +4691,7 @@
        "1        0.5075263299               NaN  "
       ]
      },
-     "execution_count": 16,
+     "execution_count": 15,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -4739,10 +4702,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 17,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 16,
+   "metadata": {},
    "outputs": [],
    "source": [
     "df_clean1.drop(df_clean1.index[0],inplace=True)"
@@ -4750,10 +4711,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 18,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 17,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -5228,7 +5187,7 @@
        "3         0.513422456      0.4200216232  "
       ]
      },
-     "execution_count": 18,
+     "execution_count": 17,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -5239,10 +5198,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 19,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 18,
+   "metadata": {},
    "outputs": [],
    "source": [
     "# df_clean1 = df_clean1.reset_index()"
@@ -5250,10 +5207,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 20,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 19,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -5728,7 +5683,7 @@
        "3         0.513422456      0.4200216232  "
       ]
      },
-     "execution_count": 20,
+     "execution_count": 19,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -5739,10 +5694,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 21,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 20,
+   "metadata": {},
    "outputs": [],
    "source": [
     "df_clean1.drop(df_clean1[df_clean1[\"County Ranked (Yes=1/No=0)\"].isnull()].index,inplace=True)"
@@ -5750,10 +5703,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 22,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 21,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -6434,7 +6385,7 @@
        "7        0.5068863875      0.8995150204  "
       ]
      },
-     "execution_count": 22,
+     "execution_count": 21,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -6445,10 +6396,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 23,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 22,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -6456,7 +6405,7 @@
        "(3142, 66)"
       ]
      },
-     "execution_count": 23,
+     "execution_count": 22,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -6467,10 +6416,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 24,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 23,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -6522,7 +6469,7 @@
        "      dtype='object')"
       ]
      },
-     "execution_count": 24,
+     "execution_count": 23,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -6533,10 +6480,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 25,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 26,
+   "metadata": {},
    "outputs": [],
    "source": [
     "columns_to_delete = [\"Release Year\",\"County Ranked (Yes=1/No=0)\",\"Access to exercise opportunities raw value\",\"Uninsured raw value\",\n",
@@ -6550,10 +6495,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 26,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 27,
+   "metadata": {},
    "outputs": [],
    "source": [
     "df_clean2 = df_clean1.drop(columns_to_delete, axis=1)"
@@ -6561,10 +6504,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 27,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 28,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -7049,7 +6990,7 @@
        "7             0.1784255253      0.8995150204  "
       ]
      },
-     "execution_count": 27,
+     "execution_count": 28,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -7060,10 +7001,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 28,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 29,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -7071,7 +7010,7 @@
        "(3142, 45)"
       ]
      },
-     "execution_count": 28,
+     "execution_count": 29,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -7082,10 +7021,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 29,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 30,
+   "metadata": {},
    "outputs": [],
    "source": [
     "df_clean2.reset_index(inplace=True)"
@@ -7093,10 +7030,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 30,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 31,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -7587,7 +7522,7 @@
        "4             0.1784255253      0.8995150204  "
       ]
      },
-     "execution_count": 30,
+     "execution_count": 31,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -7598,10 +7533,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 31,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 32,
+   "metadata": {},
    "outputs": [],
    "source": [
     "df_clean2 = df_clean2.drop(\"index\", axis=1)"
@@ -7609,10 +7542,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 32,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 33,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -8097,7 +8028,7 @@
        "4             0.1784255253      0.8995150204  "
       ]
      },
-     "execution_count": 32,
+     "execution_count": 33,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8108,10 +8039,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 33,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 34,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -8164,7 +8093,7 @@
        "dtype: int64"
       ]
      },
-     "execution_count": 33,
+     "execution_count": 34,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8175,10 +8104,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 34,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 36,
+   "metadata": {},
    "outputs": [],
    "source": [
     "df_null_counties = df_clean2[df_clean2[\"Premature death raw value\"].isnull()]"
@@ -8186,10 +8113,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 35,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 41,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -8688,7 +8613,7 @@
        "253             0.2043360434                 1  "
       ]
      },
-     "execution_count": 35,
+     "execution_count": 41,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8699,10 +8624,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 36,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 39,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -8726,7 +8649,7 @@
        "Name: Population raw value, dtype: object"
       ]
      },
-     "execution_count": 36,
+     "execution_count": 39,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8737,10 +8660,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 37,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 43,
+   "metadata": {},
    "outputs": [],
    "source": [
     "df_clean2.drop(df_clean2[df_clean2[\"Premature death raw value\"].isnull()].index,inplace=True)"
@@ -8748,10 +8669,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 38,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 57,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -8771,7 +8690,6 @@
        "Physical inactivity raw value                                            0\n",
        "Excessive drinking raw value                                             0\n",
        "Alcohol-impaired driving deaths raw value                               22\n",
-       "Ratio of population to dentists.                                        85\n",
        "Flu vaccinations raw value                                              10\n",
        "High school graduation raw value                                        77\n",
        "Some college raw value                                                   0\n",
@@ -8793,8 +8711,6 @@
        "Food insecurity raw value                                                0\n",
        "Limited access to healthy foods raw value                               19\n",
        "Insufficient sleep raw value                                             0\n",
-       "Other primary care providers raw value                                  26\n",
-       "Ratio of population to primary care providers other than physicians.    26\n",
        "Median household income raw value                                        0\n",
        "Severe housing cost burden raw value                                     0\n",
        "Population raw value                                                     0\n",
@@ -8804,7 +8720,7 @@
        "dtype: int64"
       ]
      },
-     "execution_count": 38,
+     "execution_count": 57,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8815,10 +8731,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 39,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 51,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -8826,7 +8740,7 @@
        "(3081, 45)"
       ]
      },
-     "execution_count": 39,
+     "execution_count": 51,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -8837,10 +8751,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 40,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 52,
+   "metadata": {},
    "outputs": [],
    "source": [
     "df_clean2 = df_clean2.drop(\"Ratio of population to dentists.\", axis=1)"
@@ -8848,10 +8760,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 41,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 55,
+   "metadata": {},
    "outputs": [],
    "source": [
     "df_clean2 = df_clean2.drop([\"Other primary care providers raw value\",\"Ratio of population to primary care providers other than physicians.\"], axis=1)"
@@ -8859,10 +8769,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 42,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "execution_count": 56,
+   "metadata": {},
    "outputs": [
     {
      "data": {
@@ -10478,7 +10386,7 @@
        "2951              0.152617923                 0  "
       ]
      },
-     "execution_count": 42,
+     "execution_count": 56,
      "metadata": {},
      "output_type": "execute_result"
     }
@@ -10489,1917 +10397,8 @@
   },
   {
    "cell_type": "code",
-   "execution_count": 43,
-   "metadata": {
-    "Collapsed": "false"
-   },
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "State FIPS Code                                                          0\n",
-       "County FIPS Code                                                         0\n",
-       "5-digit FIPS Code                                                        0\n",
-       "State Abbreviation                                                       0\n",
-       "Name                                                                     0\n",
-       "Premature death raw value                                                0\n",
-       "Poor or fair health raw value                                            0\n",
-       "Poor physical health days raw value                                      0\n",
-       "Poor mental health days raw value                                        0\n",
-       "Adult smoking raw value                                                  0\n",
-       "Adult obesity raw value                                                  0\n",
-       "Food environment index raw value                                        19\n",
-       "Physical inactivity raw value                                            0\n",
-       "Excessive drinking raw value                                             0\n",
-       "Alcohol-impaired driving deaths raw value                               22\n",
-       "Flu vaccinations raw value                                              10\n",
-       "High school graduation raw value                                        77\n",
-       "Some college raw value                                                   0\n",
-       "Unemployment raw value                                                   0\n",
-       "Children in poverty raw value                                            0\n",
-       "Income inequality raw value                                              0\n",
-       "Children in single-parent households raw value                           0\n",
-       "Air pollution - particulate matter raw value                            29\n",
-       "Severe housing problems raw value                                        0\n",
-       "Percentage of households with overcrowding                               0\n",
-       "Percentage of households with lack of kitchen or plumbing facilities     0\n",
-       "Driving alone to work raw value                                          0\n",
-       "Long commute - driving alone raw value                                   0\n",
-       "Life expectancy raw value                                               20\n",
-       "Premature age-adjusted mortality raw value                               0\n",
-       "Frequent physical distress raw value                                     0\n",
-       "Frequent mental distress raw value                                       0\n",
-       "Diabetes prevalence raw value                                            0\n",
-       "Food insecurity raw value                                                0\n",
-       "Limited access to healthy foods raw value                               19\n",
-       "Insufficient sleep raw value                                             0\n",
-       "Median household income raw value                                        0\n",
-       "Severe housing cost burden raw value                                     0\n",
-       "Population raw value                                                     0\n",
-       "% below 18 years of age raw value                                        0\n",
-       "% 65 and older raw value                                                 0\n",
-       "% Rural raw value                                                        6\n",
-       "dtype: int64"
-      ]
-     },
-     "execution_count": 43,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "df_clean2.isnull().sum()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 44,
-   "metadata": {
-    "Collapsed": "false"
-   },
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>State FIPS Code</th>\n",
-       "      <th>County FIPS Code</th>\n",
-       "      <th>5-digit FIPS Code</th>\n",
-       "      <th>State Abbreviation</th>\n",
-       "      <th>Name</th>\n",
-       "      <th>Premature death raw value</th>\n",
-       "      <th>Poor or fair health raw value</th>\n",
-       "      <th>Poor physical health days raw value</th>\n",
-       "      <th>Poor mental health days raw value</th>\n",
-       "      <th>Adult smoking raw value</th>\n",
-       "      <th>Adult obesity raw value</th>\n",
-       "      <th>Food environment index raw value</th>\n",
-       "      <th>Physical inactivity raw value</th>\n",
-       "      <th>Excessive drinking raw value</th>\n",
-       "      <th>Alcohol-impaired driving deaths raw value</th>\n",
-       "      <th>Flu vaccinations raw value</th>\n",
-       "      <th>High school graduation raw value</th>\n",
-       "      <th>Some college raw value</th>\n",
-       "      <th>Unemployment raw value</th>\n",
-       "      <th>Children in poverty raw value</th>\n",
-       "      <th>Income inequality raw value</th>\n",
-       "      <th>Children in single-parent households raw value</th>\n",
-       "      <th>Air pollution - particulate matter raw value</th>\n",
-       "      <th>Severe housing problems raw value</th>\n",
-       "      <th>Percentage of households with overcrowding</th>\n",
-       "      <th>Percentage of households with lack of kitchen or plumbing facilities</th>\n",
-       "      <th>Driving alone to work raw value</th>\n",
-       "      <th>Long commute - driving alone raw value</th>\n",
-       "      <th>Life expectancy raw value</th>\n",
-       "      <th>Premature age-adjusted mortality raw value</th>\n",
-       "      <th>Frequent physical distress raw value</th>\n",
-       "      <th>Frequent mental distress raw value</th>\n",
-       "      <th>Diabetes prevalence raw value</th>\n",
-       "      <th>Food insecurity raw value</th>\n",
-       "      <th>Limited access to healthy foods raw value</th>\n",
-       "      <th>Insufficient sleep raw value</th>\n",
-       "      <th>Median household income raw value</th>\n",
-       "      <th>Severe housing cost burden raw value</th>\n",
-       "      <th>Population raw value</th>\n",
-       "      <th>% below 18 years of age raw value</th>\n",
-       "      <th>% 65 and older raw value</th>\n",
-       "      <th>% Rural raw value</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>count</th>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3062</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3059</td>\n",
-       "      <td>3071</td>\n",
-       "      <td>3004</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3052</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3061</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3062</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3075</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>unique</th>\n",
-       "      <td>51</td>\n",
-       "      <td>319</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>51</td>\n",
-       "      <td>1839</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>268</td>\n",
-       "      <td>80</td>\n",
-       "      <td>277</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>841</td>\n",
-       "      <td>61</td>\n",
-       "      <td>2244</td>\n",
-       "      <td>3074</td>\n",
-       "      <td>3071</td>\n",
-       "      <td>432</td>\n",
-       "      <td>3080</td>\n",
-       "      <td>3075</td>\n",
-       "      <td>113</td>\n",
-       "      <td>3019</td>\n",
-       "      <td>2993</td>\n",
-       "      <td>2904</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>558</td>\n",
-       "      <td>3061</td>\n",
-       "      <td>2157</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>153</td>\n",
-       "      <td>245</td>\n",
-       "      <td>3054</td>\n",
-       "      <td>3081</td>\n",
-       "      <td>2967</td>\n",
-       "      <td>3075</td>\n",
-       "      <td>3028</td>\n",
-       "      <td>3079</td>\n",
-       "      <td>3080</td>\n",
-       "      <td>2411</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>top</th>\n",
-       "      <td>48</td>\n",
-       "      <td>003</td>\n",
-       "      <td>21213</td>\n",
-       "      <td>TX</td>\n",
-       "      <td>Washington County</td>\n",
-       "      <td>13923.693981</td>\n",
-       "      <td>0.119168195</td>\n",
-       "      <td>3.8468455594</td>\n",
-       "      <td>4.2047346938</td>\n",
-       "      <td>0.1987308947</td>\n",
-       "      <td>0.322</td>\n",
-       "      <td>8.1</td>\n",
-       "      <td>0.249</td>\n",
-       "      <td>0.1266290107</td>\n",
-       "      <td>0.3333333333</td>\n",
-       "      <td>0.46</td>\n",
-       "      <td>1</td>\n",
-       "      <td>0.6483516484</td>\n",
-       "      <td>0.0278884462</td>\n",
-       "      <td>0.191</td>\n",
-       "      <td>4.5163643944</td>\n",
-       "      <td>0.2173913043</td>\n",
-       "      <td>9.9</td>\n",
-       "      <td>0.1428571429</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0.7988440083</td>\n",
-       "      <td>0.329</td>\n",
-       "      <td>81.883240417</td>\n",
-       "      <td>362.4</td>\n",
-       "      <td>0.1303022243</td>\n",
-       "      <td>0.1268882901</td>\n",
-       "      <td>0.113</td>\n",
-       "      <td>0.13</td>\n",
-       "      <td>0</td>\n",
-       "      <td>0.3133644515</td>\n",
-       "      <td>39642</td>\n",
-       "      <td>0.0619126589</td>\n",
-       "      <td>13946</td>\n",
-       "      <td>0.2380952381</td>\n",
-       "      <td>0.1972776431</td>\n",
-       "      <td>1</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>freq</th>\n",
-       "      <td>244</td>\n",
-       "      <td>49</td>\n",
-       "      <td>1</td>\n",
-       "      <td>244</td>\n",
-       "      <td>30</td>\n",
-       "      <td>1</td>\n",
-       "      <td>1</td>\n",
-       "      <td>1</td>\n",
-       "      <td>1</td>\n",
-       "      <td>1</td>\n",
-       "      <td>43</td>\n",
-       "      <td>152</td>\n",
-       "      <td>36</td>\n",
-       "      <td>1</td>\n",
-       "      <td>131</td>\n",
-       "      <td>148</td>\n",
-       "      <td>44</td>\n",
-       "      <td>2</td>\n",
-       "      <td>2</td>\n",
-       "      <td>22</td>\n",
-       "      <td>2</td>\n",
-       "      <td>2</td>\n",
-       "      <td>88</td>\n",
-       "      <td>3</td>\n",
-       "      <td>21</td>\n",
-       "      <td>54</td>\n",
-       "      <td>1</td>\n",
-       "      <td>17</td>\n",
-       "      <td>1</td>\n",
-       "      <td>6</td>\n",
-       "      <td>1</td>\n",
-       "      <td>1</td>\n",
-       "      <td>59</td>\n",
-       "      <td>45</td>\n",
-       "      <td>9</td>\n",
-       "      <td>1</td>\n",
-       "      <td>3</td>\n",
-       "      <td>2</td>\n",
-       "      <td>3</td>\n",
-       "      <td>2</td>\n",
-       "      <td>2</td>\n",
-       "      <td>637</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "       State FIPS Code County FIPS Code 5-digit FIPS Code State Abbreviation  \\\n",
-       "count             3081             3081              3081               3081   \n",
-       "unique              51              319              3081                 51   \n",
-       "top                 48              003             21213                 TX   \n",
-       "freq               244               49                 1                244   \n",
-       "\n",
-       "                     Name Premature death raw value  \\\n",
-       "count                3081                      3081   \n",
-       "unique               1839                      3081   \n",
-       "top     Washington County              13923.693981   \n",
-       "freq                   30                         1   \n",
-       "\n",
-       "       Poor or fair health raw value Poor physical health days raw value  \\\n",
-       "count                           3081                                3081   \n",
-       "unique                          3081                                3081   \n",
-       "top                      0.119168195                        3.8468455594   \n",
-       "freq                               1                                   1   \n",
-       "\n",
-       "       Poor mental health days raw value Adult smoking raw value  \\\n",
-       "count                               3081                    3081   \n",
-       "unique                              3081                    3081   \n",
-       "top                         4.2047346938            0.1987308947   \n",
-       "freq                                   1                       1   \n",
-       "\n",
-       "       Adult obesity raw value Food environment index raw value  \\\n",
-       "count                     3081                             3062   \n",
-       "unique                     268                               80   \n",
-       "top                      0.322                              8.1   \n",
-       "freq                        43                              152   \n",
-       "\n",
-       "       Physical inactivity raw value Excessive drinking raw value  \\\n",
-       "count                           3081                         3081   \n",
-       "unique                           277                         3081   \n",
-       "top                            0.249                 0.1266290107   \n",
-       "freq                              36                            1   \n",
-       "\n",
-       "       Alcohol-impaired driving deaths raw value Flu vaccinations raw value  \\\n",
-       "count                                       3059                       3071   \n",
-       "unique                                       841                         61   \n",
-       "top                                 0.3333333333                       0.46   \n",
-       "freq                                         131                        148   \n",
-       "\n",
-       "       High school graduation raw value Some college raw value  \\\n",
-       "count                              3004                   3081   \n",
-       "unique                             2244                   3074   \n",
-       "top                                   1           0.6483516484   \n",
-       "freq                                 44                      2   \n",
-       "\n",
-       "       Unemployment raw value Children in poverty raw value  \\\n",
-       "count                    3081                          3081   \n",
-       "unique                   3071                           432   \n",
-       "top              0.0278884462                         0.191   \n",
-       "freq                        2                            22   \n",
-       "\n",
-       "       Income inequality raw value  \\\n",
-       "count                         3081   \n",
-       "unique                        3080   \n",
-       "top                   4.5163643944   \n",
-       "freq                             2   \n",
-       "\n",
-       "       Children in single-parent households raw value  \\\n",
-       "count                                            3081   \n",
-       "unique                                           3075   \n",
-       "top                                      0.2173913043   \n",
-       "freq                                                2   \n",
-       "\n",
-       "       Air pollution - particulate matter raw value  \\\n",
-       "count                                          3052   \n",
-       "unique                                          113   \n",
-       "top                                             9.9   \n",
-       "freq                                             88   \n",
-       "\n",
-       "       Severe housing problems raw value  \\\n",
-       "count                               3081   \n",
-       "unique                              3019   \n",
-       "top                         0.1428571429   \n",
-       "freq                                   3   \n",
-       "\n",
-       "       Percentage of households with overcrowding  \\\n",
-       "count                                        3081   \n",
-       "unique                                       2993   \n",
-       "top                                             0   \n",
-       "freq                                           21   \n",
-       "\n",
-       "       Percentage of households with lack of kitchen or plumbing facilities  \\\n",
-       "count                                                3081                     \n",
-       "unique                                               2904                     \n",
-       "top                                                     0                     \n",
-       "freq                                                   54                     \n",
-       "\n",
-       "       Driving alone to work raw value Long commute - driving alone raw value  \\\n",
-       "count                             3081                                   3081   \n",
-       "unique                            3081                                    558   \n",
-       "top                       0.7988440083                                  0.329   \n",
-       "freq                                 1                                     17   \n",
-       "\n",
-       "       Life expectancy raw value Premature age-adjusted mortality raw value  \\\n",
-       "count                       3061                                       3081   \n",
-       "unique                      3061                                       2157   \n",
-       "top                 81.883240417                                      362.4   \n",
-       "freq                           1                                          6   \n",
-       "\n",
-       "       Frequent physical distress raw value  \\\n",
-       "count                                  3081   \n",
-       "unique                                 3081   \n",
-       "top                            0.1303022243   \n",
-       "freq                                      1   \n",
-       "\n",
-       "       Frequent mental distress raw value Diabetes prevalence raw value  \\\n",
-       "count                                3081                          3081   \n",
-       "unique                               3081                           153   \n",
-       "top                          0.1268882901                         0.113   \n",
-       "freq                                    1                            59   \n",
-       "\n",
-       "       Food insecurity raw value Limited access to healthy foods raw value  \\\n",
-       "count                       3081                                      3062   \n",
-       "unique                       245                                      3054   \n",
-       "top                         0.13                                         0   \n",
-       "freq                          45                                         9   \n",
-       "\n",
-       "       Insufficient sleep raw value Median household income raw value  \\\n",
-       "count                          3081                              3081   \n",
-       "unique                         3081                              2967   \n",
-       "top                    0.3133644515                             39642   \n",
-       "freq                              1                                 3   \n",
-       "\n",
-       "       Severe housing cost burden raw value Population raw value  \\\n",
-       "count                                  3081                 3081   \n",
-       "unique                                 3075                 3028   \n",
-       "top                            0.0619126589                13946   \n",
-       "freq                                      2                    3   \n",
-       "\n",
-       "       % below 18 years of age raw value % 65 and older raw value  \\\n",
-       "count                               3081                     3081   \n",
-       "unique                              3079                     3080   \n",
-       "top                         0.2380952381             0.1972776431   \n",
-       "freq                                   2                        2   \n",
-       "\n",
-       "       % Rural raw value  \n",
-       "count               3075  \n",
-       "unique              2411  \n",
-       "top                    1  \n",
-       "freq                 637  "
-      ]
-     },
-     "execution_count": 44,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "df_clean2.describe()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 45,
-   "metadata": {
-    "Collapsed": "false"
-   },
-   "outputs": [],
-   "source": [
-    "# df_clean2.groupby(['State Abbreviation']) [['Food environment index raw value']].mean()\n",
-    "# df_clean2.astype(float)\n",
-    "df1 = df_clean2.iloc[:,5:40].astype(float)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 46,
-   "metadata": {
-    "Collapsed": "false"
-   },
-   "outputs": [],
-   "source": [
-    "df2 = df_clean2.iloc[:,0:5]"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 47,
-   "metadata": {
-    "Collapsed": "false"
-   },
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>State FIPS Code</th>\n",
-       "      <th>County FIPS Code</th>\n",
-       "      <th>5-digit FIPS Code</th>\n",
-       "      <th>State Abbreviation</th>\n",
-       "      <th>Name</th>\n",
-       "      <th>Premature death raw value</th>\n",
-       "      <th>Poor or fair health raw value</th>\n",
-       "      <th>Poor physical health days raw value</th>\n",
-       "      <th>Poor mental health days raw value</th>\n",
-       "      <th>Adult smoking raw value</th>\n",
-       "      <th>Adult obesity raw value</th>\n",
-       "      <th>Food environment index raw value</th>\n",
-       "      <th>Physical inactivity raw value</th>\n",
-       "      <th>Excessive drinking raw value</th>\n",
-       "      <th>Alcohol-impaired driving deaths raw value</th>\n",
-       "      <th>Flu vaccinations raw value</th>\n",
-       "      <th>High school graduation raw value</th>\n",
-       "      <th>Some college raw value</th>\n",
-       "      <th>Unemployment raw value</th>\n",
-       "      <th>Children in poverty raw value</th>\n",
-       "      <th>Income inequality raw value</th>\n",
-       "      <th>Children in single-parent households raw value</th>\n",
-       "      <th>Air pollution - particulate matter raw value</th>\n",
-       "      <th>Severe housing problems raw value</th>\n",
-       "      <th>Percentage of households with overcrowding</th>\n",
-       "      <th>Percentage of households with lack of kitchen or plumbing facilities</th>\n",
-       "      <th>Driving alone to work raw value</th>\n",
-       "      <th>Long commute - driving alone raw value</th>\n",
-       "      <th>Life expectancy raw value</th>\n",
-       "      <th>Premature age-adjusted mortality raw value</th>\n",
-       "      <th>Frequent physical distress raw value</th>\n",
-       "      <th>Frequent mental distress raw value</th>\n",
-       "      <th>Diabetes prevalence raw value</th>\n",
-       "      <th>Food insecurity raw value</th>\n",
-       "      <th>Limited access to healthy foods raw value</th>\n",
-       "      <th>Insufficient sleep raw value</th>\n",
-       "      <th>Median household income raw value</th>\n",
-       "      <th>Severe housing cost burden raw value</th>\n",
-       "      <th>Population raw value</th>\n",
-       "      <th>% below 18 years of age raw value</th>\n",
-       "      <th>% 65 and older raw value</th>\n",
-       "      <th>% Rural raw value</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>0</th>\n",
-       "      <td>01</td>\n",
-       "      <td>001</td>\n",
-       "      <td>01001</td>\n",
-       "      <td>AL</td>\n",
-       "      <td>Autauga County</td>\n",
-       "      <td>8824.0571232</td>\n",
-       "      <td>0.1841112436</td>\n",
-       "      <td>4.2005779826</td>\n",
-       "      <td>4.3067392835</td>\n",
-       "      <td>0.191246585</td>\n",
-       "      <td>0.375</td>\n",
-       "      <td>7.2</td>\n",
-       "      <td>0.311</td>\n",
-       "      <td>0.1687801512</td>\n",
-       "      <td>0.2881355932</td>\n",
-       "      <td>0.41</td>\n",
-       "      <td>0.9</td>\n",
-       "      <td>0.6085466499</td>\n",
-       "      <td>0.0386352233</td>\n",
-       "      <td>0.193</td>\n",
-       "      <td>4.6366638778</td>\n",
-       "      <td>0.2470009686</td>\n",
-       "      <td>11.7</td>\n",
-       "      <td>0.1495464575</td>\n",
-       "      <td>0.0245158127</td>\n",
-       "      <td>0.0063741113</td>\n",
-       "      <td>0.8596505653</td>\n",
-       "      <td>0.383</td>\n",
-       "      <td>76.330589011</td>\n",
-       "      <td>438.7</td>\n",
-       "      <td>0.1282443447</td>\n",
-       "      <td>0.1263835707</td>\n",
-       "      <td>0.142</td>\n",
-       "      <td>0.134</td>\n",
-       "      <td>0.11991125</td>\n",
-       "      <td>0.3590540606</td>\n",
-       "      <td>58343</td>\n",
-       "      <td>0.1264520575</td>\n",
-       "      <td>55504</td>\n",
-       "      <td>0.2393701355</td>\n",
-       "      <td>0.1511963102</td>\n",
-       "      <td>0.4200216232</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>1</th>\n",
-       "      <td>01</td>\n",
-       "      <td>003</td>\n",
-       "      <td>01003</td>\n",
-       "      <td>AL</td>\n",
-       "      <td>Baldwin County</td>\n",
-       "      <td>7224.6321603</td>\n",
-       "      <td>0.1806045782</td>\n",
-       "      <td>4.0987477691</td>\n",
-       "      <td>4.2496487805</td>\n",
-       "      <td>0.1679548515</td>\n",
-       "      <td>0.31</td>\n",
-       "      <td>8</td>\n",
-       "      <td>0.238</td>\n",
-       "      <td>0.1671496869</td>\n",
-       "      <td>0.31875</td>\n",
-       "      <td>0.45</td>\n",
-       "      <td>0.863615768</td>\n",
-       "      <td>0.6613392634</td>\n",
-       "      <td>0.0398833641</td>\n",
-       "      <td>0.147</td>\n",
-       "      <td>4.5185596041</td>\n",
-       "      <td>0.2518409096</td>\n",
-       "      <td>10.3</td>\n",
-       "      <td>0.1383172525</td>\n",
-       "      <td>0.0107280211</td>\n",
-       "      <td>0.0060724647</td>\n",
-       "      <td>0.8471942348</td>\n",
-       "      <td>0.405</td>\n",
-       "      <td>78.599497656</td>\n",
-       "      <td>348.4</td>\n",
-       "      <td>0.1262200157</td>\n",
-       "      <td>0.1282255819</td>\n",
-       "      <td>0.113</td>\n",
-       "      <td>0.123</td>\n",
-       "      <td>0.054244266</td>\n",
-       "      <td>0.3330586814</td>\n",
-       "      <td>56607</td>\n",
-       "      <td>0.1279592201</td>\n",
-       "      <td>212628</td>\n",
-       "      <td>0.2184848656</td>\n",
-       "      <td>0.1994704366</td>\n",
-       "      <td>0.4227909911</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>2</th>\n",
-       "      <td>01</td>\n",
-       "      <td>005</td>\n",
-       "      <td>01005</td>\n",
-       "      <td>AL</td>\n",
-       "      <td>Barbour County</td>\n",
-       "      <td>9586.165037</td>\n",
-       "      <td>0.2577341563</td>\n",
-       "      <td>5.0674383044</td>\n",
-       "      <td>4.634994147</td>\n",
-       "      <td>0.2154087757</td>\n",
-       "      <td>0.443</td>\n",
-       "      <td>5.6</td>\n",
-       "      <td>0.282</td>\n",
-       "      <td>0.1269871542</td>\n",
-       "      <td>0.2962962963</td>\n",
-       "      <td>0.37</td>\n",
-       "      <td>0.8141025641</td>\n",
-       "      <td>0.3677400805</td>\n",
-       "      <td>0.0590092278</td>\n",
-       "      <td>0.503</td>\n",
-       "      <td>5.7550626063</td>\n",
-       "      <td>0.5721574344</td>\n",
-       "      <td>11.5</td>\n",
-       "      <td>0.1545553145</td>\n",
-       "      <td>0.0200650759</td>\n",
-       "      <td>0.0081344902</td>\n",
-       "      <td>0.8340435333</td>\n",
-       "      <td>0.338</td>\n",
-       "      <td>75.77945737</td>\n",
-       "      <td>469.8</td>\n",
-       "      <td>0.1621615961</td>\n",
-       "      <td>0.1463231059</td>\n",
-       "      <td>0.18</td>\n",
-       "      <td>0.232</td>\n",
-       "      <td>0.1073966657</td>\n",
-       "      <td>0.3856316713</td>\n",
-       "      <td>32490</td>\n",
-       "      <td>0.1358676522</td>\n",
-       "      <td>25270</td>\n",
-       "      <td>0.2076375148</td>\n",
-       "      <td>0.1882469331</td>\n",
-       "      <td>0.677896347</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>3</th>\n",
-       "      <td>01</td>\n",
-       "      <td>007</td>\n",
-       "      <td>01007</td>\n",
-       "      <td>AL</td>\n",
-       "      <td>Bibb County</td>\n",
-       "      <td>11783.543675</td>\n",
-       "      <td>0.1999691186</td>\n",
-       "      <td>4.3633772783</td>\n",
-       "      <td>4.3157100192</td>\n",
-       "      <td>0.1991640424</td>\n",
-       "      <td>0.378</td>\n",
-       "      <td>7.6</td>\n",
-       "      <td>0.349</td>\n",
-       "      <td>0.1592515079</td>\n",
-       "      <td>0.2727272727</td>\n",
-       "      <td>0.39</td>\n",
-       "      <td>0.8376383764</td>\n",
-       "      <td>0.4840631037</td>\n",
-       "      <td>0.043851399</td>\n",
-       "      <td>0.273</td>\n",
-       "      <td>4.2545944386</td>\n",
-       "      <td>0.2956540355</td>\n",
-       "      <td>11.2</td>\n",
-       "      <td>0.1096085409</td>\n",
-       "      <td>0.0019928826</td>\n",
-       "      <td>0.0028469751</td>\n",
-       "      <td>0.8636590229</td>\n",
-       "      <td>0.486</td>\n",
-       "      <td>73.928271076</td>\n",
-       "      <td>563.7</td>\n",
-       "      <td>0.1316296828</td>\n",
-       "      <td>0.1285403606</td>\n",
-       "      <td>0.149</td>\n",
-       "      <td>0.158</td>\n",
-       "      <td>0.0260162701</td>\n",
-       "      <td>0.381488654</td>\n",
-       "      <td>45795</td>\n",
-       "      <td>0.0873388931</td>\n",
-       "      <td>22668</td>\n",
-       "      <td>0.2060614082</td>\n",
-       "      <td>0.1602258691</td>\n",
-       "      <td>0.6835260746</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>4</th>\n",
-       "      <td>01</td>\n",
-       "      <td>009</td>\n",
-       "      <td>01009</td>\n",
-       "      <td>AL</td>\n",
-       "      <td>Blount County</td>\n",
-       "      <td>10908.101822</td>\n",
-       "      <td>0.2109532316</td>\n",
-       "      <td>4.5127526482</td>\n",
-       "      <td>4.7015992588</td>\n",
-       "      <td>0.1965215818</td>\n",
-       "      <td>0.344</td>\n",
-       "      <td>8.5</td>\n",
-       "      <td>0.285</td>\n",
-       "      <td>0.1537872189</td>\n",
-       "      <td>0.21875</td>\n",
-       "      <td>0.38</td>\n",
-       "      <td>0.9346879536</td>\n",
-       "      <td>0.5441399754</td>\n",
-       "      <td>0.0402139299</td>\n",
-       "      <td>0.185</td>\n",
-       "      <td>4.1268834637</td>\n",
-       "      <td>0.2956973294</td>\n",
-       "      <td>11.7</td>\n",
-       "      <td>0.1040115301</td>\n",
-       "      <td>0.0172471775</td>\n",
-       "      <td>0.0091280327</td>\n",
-       "      <td>0.8679227508</td>\n",
-       "      <td>0.597</td>\n",
-       "      <td>74.597766875</td>\n",
-       "      <td>501.8</td>\n",
-       "      <td>0.1372005681</td>\n",
-       "      <td>0.138279427</td>\n",
-       "      <td>0.143</td>\n",
-       "      <td>0.11</td>\n",
-       "      <td>0.0288014982</td>\n",
-       "      <td>0.3594501042</td>\n",
-       "      <td>48253</td>\n",
-       "      <td>0.0819449522</td>\n",
-       "      <td>58013</td>\n",
-       "      <td>0.2334993881</td>\n",
-       "      <td>0.1784255253</td>\n",
-       "      <td>0.8995150204</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "  State FIPS Code County FIPS Code 5-digit FIPS Code State Abbreviation  \\\n",
-       "0              01              001             01001                 AL   \n",
-       "1              01              003             01003                 AL   \n",
-       "2              01              005             01005                 AL   \n",
-       "3              01              007             01007                 AL   \n",
-       "4              01              009             01009                 AL   \n",
-       "\n",
-       "             Name Premature death raw value Poor or fair health raw value  \\\n",
-       "0  Autauga County              8824.0571232                  0.1841112436   \n",
-       "1  Baldwin County              7224.6321603                  0.1806045782   \n",
-       "2  Barbour County               9586.165037                  0.2577341563   \n",
-       "3     Bibb County              11783.543675                  0.1999691186   \n",
-       "4   Blount County              10908.101822                  0.2109532316   \n",
-       "\n",
-       "  Poor physical health days raw value Poor mental health days raw value  \\\n",
-       "0                        4.2005779826                      4.3067392835   \n",
-       "1                        4.0987477691                      4.2496487805   \n",
-       "2                        5.0674383044                       4.634994147   \n",
-       "3                        4.3633772783                      4.3157100192   \n",
-       "4                        4.5127526482                      4.7015992588   \n",
-       "\n",
-       "  Adult smoking raw value Adult obesity raw value  \\\n",
-       "0             0.191246585                   0.375   \n",
-       "1            0.1679548515                    0.31   \n",
-       "2            0.2154087757                   0.443   \n",
-       "3            0.1991640424                   0.378   \n",
-       "4            0.1965215818                   0.344   \n",
-       "\n",
-       "  Food environment index raw value Physical inactivity raw value  \\\n",
-       "0                              7.2                         0.311   \n",
-       "1                                8                         0.238   \n",
-       "2                              5.6                         0.282   \n",
-       "3                              7.6                         0.349   \n",
-       "4                              8.5                         0.285   \n",
-       "\n",
-       "  Excessive drinking raw value Alcohol-impaired driving deaths raw value  \\\n",
-       "0                 0.1687801512                              0.2881355932   \n",
-       "1                 0.1671496869                                   0.31875   \n",
-       "2                 0.1269871542                              0.2962962963   \n",
-       "3                 0.1592515079                              0.2727272727   \n",
-       "4                 0.1537872189                                   0.21875   \n",
-       "\n",
-       "  Flu vaccinations raw value High school graduation raw value  \\\n",
-       "0                       0.41                              0.9   \n",
-       "1                       0.45                      0.863615768   \n",
-       "2                       0.37                     0.8141025641   \n",
-       "3                       0.39                     0.8376383764   \n",
-       "4                       0.38                     0.9346879536   \n",
-       "\n",
-       "  Some college raw value Unemployment raw value Children in poverty raw value  \\\n",
-       "0           0.6085466499           0.0386352233                         0.193   \n",
-       "1           0.6613392634           0.0398833641                         0.147   \n",
-       "2           0.3677400805           0.0590092278                         0.503   \n",
-       "3           0.4840631037            0.043851399                         0.273   \n",
-       "4           0.5441399754           0.0402139299                         0.185   \n",
-       "\n",
-       "  Income inequality raw value Children in single-parent households raw value  \\\n",
-       "0                4.6366638778                                   0.2470009686   \n",
-       "1                4.5185596041                                   0.2518409096   \n",
-       "2                5.7550626063                                   0.5721574344   \n",
-       "3                4.2545944386                                   0.2956540355   \n",
-       "4                4.1268834637                                   0.2956973294   \n",
-       "\n",
-       "  Air pollution - particulate matter raw value  \\\n",
-       "0                                         11.7   \n",
-       "1                                         10.3   \n",
-       "2                                         11.5   \n",
-       "3                                         11.2   \n",
-       "4                                         11.7   \n",
-       "\n",
-       "  Severe housing problems raw value  \\\n",
-       "0                      0.1495464575   \n",
-       "1                      0.1383172525   \n",
-       "2                      0.1545553145   \n",
-       "3                      0.1096085409   \n",
-       "4                      0.1040115301   \n",
-       "\n",
-       "  Percentage of households with overcrowding  \\\n",
-       "0                               0.0245158127   \n",
-       "1                               0.0107280211   \n",
-       "2                               0.0200650759   \n",
-       "3                               0.0019928826   \n",
-       "4                               0.0172471775   \n",
-       "\n",
-       "  Percentage of households with lack of kitchen or plumbing facilities  \\\n",
-       "0                                       0.0063741113                     \n",
-       "1                                       0.0060724647                     \n",
-       "2                                       0.0081344902                     \n",
-       "3                                       0.0028469751                     \n",
-       "4                                       0.0091280327                     \n",
-       "\n",
-       "  Driving alone to work raw value Long commute - driving alone raw value  \\\n",
-       "0                    0.8596505653                                  0.383   \n",
-       "1                    0.8471942348                                  0.405   \n",
-       "2                    0.8340435333                                  0.338   \n",
-       "3                    0.8636590229                                  0.486   \n",
-       "4                    0.8679227508                                  0.597   \n",
-       "\n",
-       "  Life expectancy raw value Premature age-adjusted mortality raw value  \\\n",
-       "0              76.330589011                                      438.7   \n",
-       "1              78.599497656                                      348.4   \n",
-       "2               75.77945737                                      469.8   \n",
-       "3              73.928271076                                      563.7   \n",
-       "4              74.597766875                                      501.8   \n",
-       "\n",
-       "  Frequent physical distress raw value Frequent mental distress raw value  \\\n",
-       "0                         0.1282443447                       0.1263835707   \n",
-       "1                         0.1262200157                       0.1282255819   \n",
-       "2                         0.1621615961                       0.1463231059   \n",
-       "3                         0.1316296828                       0.1285403606   \n",
-       "4                         0.1372005681                        0.138279427   \n",
-       "\n",
-       "  Diabetes prevalence raw value Food insecurity raw value  \\\n",
-       "0                         0.142                     0.134   \n",
-       "1                         0.113                     0.123   \n",
-       "2                          0.18                     0.232   \n",
-       "3                         0.149                     0.158   \n",
-       "4                         0.143                      0.11   \n",
-       "\n",
-       "  Limited access to healthy foods raw value Insufficient sleep raw value  \\\n",
-       "0                                0.11991125                 0.3590540606   \n",
-       "1                               0.054244266                 0.3330586814   \n",
-       "2                              0.1073966657                 0.3856316713   \n",
-       "3                              0.0260162701                  0.381488654   \n",
-       "4                              0.0288014982                 0.3594501042   \n",
-       "\n",
-       "  Median household income raw value Severe housing cost burden raw value  \\\n",
-       "0                             58343                         0.1264520575   \n",
-       "1                             56607                         0.1279592201   \n",
-       "2                             32490                         0.1358676522   \n",
-       "3                             45795                         0.0873388931   \n",
-       "4                             48253                         0.0819449522   \n",
-       "\n",
-       "  Population raw value % below 18 years of age raw value  \\\n",
-       "0                55504                      0.2393701355   \n",
-       "1               212628                      0.2184848656   \n",
-       "2                25270                      0.2076375148   \n",
-       "3                22668                      0.2060614082   \n",
-       "4                58013                      0.2334993881   \n",
-       "\n",
-       "  % 65 and older raw value % Rural raw value  \n",
-       "0             0.1511963102      0.4200216232  \n",
-       "1             0.1994704366      0.4227909911  \n",
-       "2             0.1882469331       0.677896347  \n",
-       "3             0.1602258691      0.6835260746  \n",
-       "4             0.1784255253      0.8995150204  "
-      ]
-     },
-     "execution_count": 47,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "df_clean2.sort_values('State FIPS Code', ascending = True)\n",
-    "df_clean2.head()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 48,
-   "metadata": {
-    "Collapsed": "false"
-   },
-   "outputs": [],
-   "source": [
-    "df3 = df2.merge(df1, left_index = True, right_index = True)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 49,
-   "metadata": {
-    "Collapsed": "false"
-   },
-   "outputs": [
-    {
-     "data": {
-      "text/html": [
-       "<div>\n",
-       "<style scoped>\n",
-       "    .dataframe tbody tr th:only-of-type {\n",
-       "        vertical-align: middle;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe tbody tr th {\n",
-       "        vertical-align: top;\n",
-       "    }\n",
-       "\n",
-       "    .dataframe thead th {\n",
-       "        text-align: right;\n",
-       "    }\n",
-       "</style>\n",
-       "<table border=\"1\" class=\"dataframe\">\n",
-       "  <thead>\n",
-       "    <tr style=\"text-align: right;\">\n",
-       "      <th></th>\n",
-       "      <th>Premature death raw value</th>\n",
-       "      <th>Poor or fair health raw value</th>\n",
-       "      <th>Poor physical health days raw value</th>\n",
-       "      <th>Poor mental health days raw value</th>\n",
-       "      <th>Adult smoking raw value</th>\n",
-       "      <th>Adult obesity raw value</th>\n",
-       "      <th>Food environment index raw value</th>\n",
-       "      <th>Physical inactivity raw value</th>\n",
-       "      <th>Excessive drinking raw value</th>\n",
-       "      <th>Alcohol-impaired driving deaths raw value</th>\n",
-       "      <th>Flu vaccinations raw value</th>\n",
-       "      <th>High school graduation raw value</th>\n",
-       "      <th>Some college raw value</th>\n",
-       "      <th>Unemployment raw value</th>\n",
-       "      <th>Children in poverty raw value</th>\n",
-       "      <th>Income inequality raw value</th>\n",
-       "      <th>Children in single-parent households raw value</th>\n",
-       "      <th>Air pollution - particulate matter raw value</th>\n",
-       "      <th>Severe housing problems raw value</th>\n",
-       "      <th>Percentage of households with overcrowding</th>\n",
-       "      <th>Percentage of households with lack of kitchen or plumbing facilities</th>\n",
-       "      <th>Driving alone to work raw value</th>\n",
-       "      <th>Long commute - driving alone raw value</th>\n",
-       "      <th>Life expectancy raw value</th>\n",
-       "      <th>Premature age-adjusted mortality raw value</th>\n",
-       "      <th>Frequent physical distress raw value</th>\n",
-       "      <th>Frequent mental distress raw value</th>\n",
-       "      <th>Diabetes prevalence raw value</th>\n",
-       "      <th>Food insecurity raw value</th>\n",
-       "      <th>Limited access to healthy foods raw value</th>\n",
-       "      <th>Insufficient sleep raw value</th>\n",
-       "      <th>Median household income raw value</th>\n",
-       "      <th>Severe housing cost burden raw value</th>\n",
-       "      <th>Population raw value</th>\n",
-       "      <th>% below 18 years of age raw value</th>\n",
-       "    </tr>\n",
-       "  </thead>\n",
-       "  <tbody>\n",
-       "    <tr>\n",
-       "      <th>count</th>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3062.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3059.000000</td>\n",
-       "      <td>3071.000000</td>\n",
-       "      <td>3004.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3052.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3061.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3062.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3081.000000</td>\n",
-       "      <td>3.081000e+03</td>\n",
-       "      <td>3081.000000</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>mean</th>\n",
-       "      <td>8484.184559</td>\n",
-       "      <td>0.175383</td>\n",
-       "      <td>3.933886</td>\n",
-       "      <td>3.944677</td>\n",
-       "      <td>0.179239</td>\n",
-       "      <td>0.321230</td>\n",
-       "      <td>7.497779</td>\n",
-       "      <td>0.257313</td>\n",
-       "      <td>0.173965</td>\n",
-       "      <td>0.291872</td>\n",
-       "      <td>0.406200</td>\n",
-       "      <td>0.882874</td>\n",
-       "      <td>0.574779</td>\n",
-       "      <td>0.046366</td>\n",
-       "      <td>0.215934</td>\n",
-       "      <td>4.523003</td>\n",
-       "      <td>0.325768</td>\n",
-       "      <td>9.080505</td>\n",
-       "      <td>0.142774</td>\n",
-       "      <td>0.024194</td>\n",
-       "      <td>0.012432</td>\n",
-       "      <td>0.798331</td>\n",
-       "      <td>0.310414</td>\n",
-       "      <td>77.420786</td>\n",
-       "      <td>406.969458</td>\n",
-       "      <td>0.120246</td>\n",
-       "      <td>0.122427</td>\n",
-       "      <td>0.116595</td>\n",
-       "      <td>0.137285</td>\n",
-       "      <td>0.082372</td>\n",
-       "      <td>0.331324</td>\n",
-       "      <td>51072.390782</td>\n",
-       "      <td>0.115519</td>\n",
-       "      <td>1.056966e+05</td>\n",
-       "      <td>0.222632</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>std</th>\n",
-       "      <td>2732.323044</td>\n",
-       "      <td>0.046909</td>\n",
-       "      <td>0.712199</td>\n",
-       "      <td>0.609354</td>\n",
-       "      <td>0.036578</td>\n",
-       "      <td>0.045782</td>\n",
-       "      <td>1.132941</td>\n",
-       "      <td>0.051832</td>\n",
-       "      <td>0.032508</td>\n",
-       "      <td>0.146245</td>\n",
-       "      <td>0.096447</td>\n",
-       "      <td>0.072823</td>\n",
-       "      <td>0.115632</td>\n",
-       "      <td>0.016639</td>\n",
-       "      <td>0.091397</td>\n",
-       "      <td>0.731474</td>\n",
-       "      <td>0.103262</td>\n",
-       "      <td>1.927073</td>\n",
-       "      <td>0.046461</td>\n",
-       "      <td>0.024036</td>\n",
-       "      <td>0.016224</td>\n",
-       "      <td>0.071387</td>\n",
-       "      <td>0.123433</td>\n",
-       "      <td>2.972095</td>\n",
-       "      <td>113.417050</td>\n",
-       "      <td>0.023201</td>\n",
-       "      <td>0.018844</td>\n",
-       "      <td>0.026016</td>\n",
-       "      <td>0.041842</td>\n",
-       "      <td>0.076339</td>\n",
-       "      <td>0.041211</td>\n",
-       "      <td>13550.629873</td>\n",
-       "      <td>0.036755</td>\n",
-       "      <td>3.360162e+05</td>\n",
-       "      <td>0.034139</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>min</th>\n",
-       "      <td>2610.690433</td>\n",
-       "      <td>0.082892</td>\n",
-       "      <td>2.323511</td>\n",
-       "      <td>2.439654</td>\n",
-       "      <td>0.067354</td>\n",
-       "      <td>0.136000</td>\n",
-       "      <td>0.000000</td>\n",
-       "      <td>0.084000</td>\n",
-       "      <td>0.092652</td>\n",
-       "      <td>0.000000</td>\n",
-       "      <td>0.030000</td>\n",
-       "      <td>0.363014</td>\n",
-       "      <td>0.167562</td>\n",
-       "      <td>0.016242</td>\n",
-       "      <td>0.027000</td>\n",
-       "      <td>2.670994</td>\n",
-       "      <td>0.000000</td>\n",
-       "      <td>3.000000</td>\n",
-       "      <td>0.030380</td>\n",
-       "      <td>0.000000</td>\n",
-       "      <td>0.000000</td>\n",
-       "      <td>0.045849</td>\n",
-       "      <td>0.000000</td>\n",
-       "      <td>62.441612</td>\n",
-       "      <td>123.600000</td>\n",
-       "      <td>0.069370</td>\n",
-       "      <td>0.080346</td>\n",
-       "      <td>0.033000</td>\n",
-       "      <td>0.037000</td>\n",
-       "      <td>0.000000</td>\n",
-       "      <td>0.230283</td>\n",
-       "      <td>22679.000000</td>\n",
-       "      <td>0.027101</td>\n",
-       "      <td>8.100000e+02</td>\n",
-       "      <td>0.071554</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>25%</th>\n",
-       "      <td>6602.249550</td>\n",
-       "      <td>0.139898</td>\n",
-       "      <td>3.407345</td>\n",
-       "      <td>3.515171</td>\n",
-       "      <td>0.152714</td>\n",
-       "      <td>0.294000</td>\n",
-       "      <td>7.000000</td>\n",
-       "      <td>0.223000</td>\n",
-       "      <td>0.150592</td>\n",
-       "      <td>0.200000</td>\n",
-       "      <td>0.350000</td>\n",
-       "      <td>0.845962</td>\n",
-       "      <td>0.492928</td>\n",
-       "      <td>0.035431</td>\n",
-       "      <td>0.148000</td>\n",
-       "      <td>4.024311</td>\n",
-       "      <td>0.257667</td>\n",
-       "      <td>7.800000</td>\n",
-       "      <td>0.113613</td>\n",
-       "      <td>0.012360</td>\n",
-       "      <td>0.006641</td>\n",
-       "      <td>0.774278</td>\n",
-       "      <td>0.217000</td>\n",
-       "      <td>75.487184</td>\n",
-       "      <td>327.600000</td>\n",
-       "      <td>0.102566</td>\n",
-       "      <td>0.108584</td>\n",
-       "      <td>0.098000</td>\n",
-       "      <td>0.110000</td>\n",
-       "      <td>0.035745</td>\n",
-       "      <td>0.301977</td>\n",
-       "      <td>42247.000000</td>\n",
-       "      <td>0.090613</td>\n",
-       "      <td>1.172700e+04</td>\n",
-       "      <td>0.202175</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>50%</th>\n",
-       "      <td>8130.554003</td>\n",
-       "      <td>0.167853</td>\n",
-       "      <td>3.883677</td>\n",
-       "      <td>3.954020</td>\n",
-       "      <td>0.173944</td>\n",
-       "      <td>0.324000</td>\n",
-       "      <td>7.700000</td>\n",
-       "      <td>0.258000</td>\n",
-       "      <td>0.173585</td>\n",
-       "      <td>0.282353</td>\n",
-       "      <td>0.420000</td>\n",
-       "      <td>0.895017</td>\n",
-       "      <td>0.575222</td>\n",
-       "      <td>0.043763</td>\n",
-       "      <td>0.205000</td>\n",
-       "      <td>4.421342</td>\n",
-       "      <td>0.319383</td>\n",
-       "      <td>9.400000</td>\n",
-       "      <td>0.138107</td>\n",
-       "      <td>0.019114</td>\n",
-       "      <td>0.009801</td>\n",
-       "      <td>0.810557</td>\n",
-       "      <td>0.305000</td>\n",
-       "      <td>77.532488</td>\n",
-       "      <td>393.000000</td>\n",
-       "      <td>0.117482</td>\n",
-       "      <td>0.121257</td>\n",
-       "      <td>0.115000</td>\n",
-       "      <td>0.132000</td>\n",
-       "      <td>0.064471</td>\n",
-       "      <td>0.330613</td>\n",
-       "      <td>48820.000000</td>\n",
-       "      <td>0.110805</td>\n",
-       "      <td>2.664600e+04</td>\n",
-       "      <td>0.222285</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>75%</th>\n",
-       "      <td>10004.410100</td>\n",
-       "      <td>0.205725</td>\n",
-       "      <td>4.430238</td>\n",
-       "      <td>4.355846</td>\n",
-       "      <td>0.203463</td>\n",
-       "      <td>0.351000</td>\n",
-       "      <td>8.300000</td>\n",
-       "      <td>0.292000</td>\n",
-       "      <td>0.196654</td>\n",
-       "      <td>0.361029</td>\n",
-       "      <td>0.480000</td>\n",
-       "      <td>0.934353</td>\n",
-       "      <td>0.658651</td>\n",
-       "      <td>0.053769</td>\n",
-       "      <td>0.268000</td>\n",
-       "      <td>4.870036</td>\n",
-       "      <td>0.378539</td>\n",
-       "      <td>10.400000</td>\n",
-       "      <td>0.164282</td>\n",
-       "      <td>0.028543</td>\n",
-       "      <td>0.014493</td>\n",
-       "      <td>0.840497</td>\n",
-       "      <td>0.395000</td>\n",
-       "      <td>79.267982</td>\n",
-       "      <td>476.300000</td>\n",
-       "      <td>0.135520</td>\n",
-       "      <td>0.134830</td>\n",
-       "      <td>0.134000</td>\n",
-       "      <td>0.158000</td>\n",
-       "      <td>0.104122</td>\n",
-       "      <td>0.361455</td>\n",
-       "      <td>56696.000000</td>\n",
-       "      <td>0.135370</td>\n",
-       "      <td>6.911500e+04</td>\n",
-       "      <td>0.239958</td>\n",
-       "    </tr>\n",
-       "    <tr>\n",
-       "      <th>max</th>\n",
-       "      <td>35146.645203</td>\n",
-       "      <td>0.407324</td>\n",
-       "      <td>7.230990</td>\n",
-       "      <td>5.964156</td>\n",
-       "      <td>0.427541</td>\n",
-       "      <td>0.495000</td>\n",
-       "      <td>10.000000</td>\n",
-       "      <td>0.451000</td>\n",
-       "      <td>0.294401</td>\n",
-       "      <td>1.000000</td>\n",
-       "      <td>0.650000</td>\n",
-       "      <td>1.000000</td>\n",
-       "      <td>0.901178</td>\n",
-       "      <td>0.200713</td>\n",
-       "      <td>0.747000</td>\n",
-       "      <td>9.148363</td>\n",
-       "      <td>0.797768</td>\n",
-       "      <td>19.700000</td>\n",
-       "      <td>0.712166</td>\n",
-       "      <td>0.519288</td>\n",
-       "      <td>0.376263</td>\n",
-       "      <td>0.960982</td>\n",
-       "      <td>0.845000</td>\n",
-       "      <td>97.965235</td>\n",
-       "      <td>1146.100000</td>\n",
-       "      <td>0.246185</td>\n",
-       "      <td>0.222063</td>\n",
-       "      <td>0.209000</td>\n",
-       "      <td>0.361000</td>\n",
-       "      <td>0.718442</td>\n",
-       "      <td>0.467078</td>\n",
-       "      <td>136191.000000</td>\n",
-       "      <td>0.316407</td>\n",
-       "      <td>1.016351e+07</td>\n",
-       "      <td>0.412419</td>\n",
-       "    </tr>\n",
-       "  </tbody>\n",
-       "</table>\n",
-       "</div>"
-      ],
-      "text/plain": [
-       "       Premature death raw value  Poor or fair health raw value  \\\n",
-       "count                3081.000000                    3081.000000   \n",
-       "mean                 8484.184559                       0.175383   \n",
-       "std                  2732.323044                       0.046909   \n",
-       "min                  2610.690433                       0.082892   \n",
-       "25%                  6602.249550                       0.139898   \n",
-       "50%                  8130.554003                       0.167853   \n",
-       "75%                 10004.410100                       0.205725   \n",
-       "max                 35146.645203                       0.407324   \n",
-       "\n",
-       "       Poor physical health days raw value  Poor mental health days raw value  \\\n",
-       "count                          3081.000000                        3081.000000   \n",
-       "mean                              3.933886                           3.944677   \n",
-       "std                               0.712199                           0.609354   \n",
-       "min                               2.323511                           2.439654   \n",
-       "25%                               3.407345                           3.515171   \n",
-       "50%                               3.883677                           3.954020   \n",
-       "75%                               4.430238                           4.355846   \n",
-       "max                               7.230990                           5.964156   \n",
-       "\n",
-       "       Adult smoking raw value  Adult obesity raw value  \\\n",
-       "count              3081.000000              3081.000000   \n",
-       "mean                  0.179239                 0.321230   \n",
-       "std                   0.036578                 0.045782   \n",
-       "min                   0.067354                 0.136000   \n",
-       "25%                   0.152714                 0.294000   \n",
-       "50%                   0.173944                 0.324000   \n",
-       "75%                   0.203463                 0.351000   \n",
-       "max                   0.427541                 0.495000   \n",
-       "\n",
-       "       Food environment index raw value  Physical inactivity raw value  \\\n",
-       "count                       3062.000000                    3081.000000   \n",
-       "mean                           7.497779                       0.257313   \n",
-       "std                            1.132941                       0.051832   \n",
-       "min                            0.000000                       0.084000   \n",
-       "25%                            7.000000                       0.223000   \n",
-       "50%                            7.700000                       0.258000   \n",
-       "75%                            8.300000                       0.292000   \n",
-       "max                           10.000000                       0.451000   \n",
-       "\n",
-       "       Excessive drinking raw value  \\\n",
-       "count                   3081.000000   \n",
-       "mean                       0.173965   \n",
-       "std                        0.032508   \n",
-       "min                        0.092652   \n",
-       "25%                        0.150592   \n",
-       "50%                        0.173585   \n",
-       "75%                        0.196654   \n",
-       "max                        0.294401   \n",
-       "\n",
-       "       Alcohol-impaired driving deaths raw value  Flu vaccinations raw value  \\\n",
-       "count                                3059.000000                 3071.000000   \n",
-       "mean                                    0.291872                    0.406200   \n",
-       "std                                     0.146245                    0.096447   \n",
-       "min                                     0.000000                    0.030000   \n",
-       "25%                                     0.200000                    0.350000   \n",
-       "50%                                     0.282353                    0.420000   \n",
-       "75%                                     0.361029                    0.480000   \n",
-       "max                                     1.000000                    0.650000   \n",
-       "\n",
-       "       High school graduation raw value  Some college raw value  \\\n",
-       "count                       3004.000000             3081.000000   \n",
-       "mean                           0.882874                0.574779   \n",
-       "std                            0.072823                0.115632   \n",
-       "min                            0.363014                0.167562   \n",
-       "25%                            0.845962                0.492928   \n",
-       "50%                            0.895017                0.575222   \n",
-       "75%                            0.934353                0.658651   \n",
-       "max                            1.000000                0.901178   \n",
-       "\n",
-       "       Unemployment raw value  Children in poverty raw value  \\\n",
-       "count             3081.000000                    3081.000000   \n",
-       "mean                 0.046366                       0.215934   \n",
-       "std                  0.016639                       0.091397   \n",
-       "min                  0.016242                       0.027000   \n",
-       "25%                  0.035431                       0.148000   \n",
-       "50%                  0.043763                       0.205000   \n",
-       "75%                  0.053769                       0.268000   \n",
-       "max                  0.200713                       0.747000   \n",
-       "\n",
-       "       Income inequality raw value  \\\n",
-       "count                  3081.000000   \n",
-       "mean                      4.523003   \n",
-       "std                       0.731474   \n",
-       "min                       2.670994   \n",
-       "25%                       4.024311   \n",
-       "50%                       4.421342   \n",
-       "75%                       4.870036   \n",
-       "max                       9.148363   \n",
-       "\n",
-       "       Children in single-parent households raw value  \\\n",
-       "count                                     3081.000000   \n",
-       "mean                                         0.325768   \n",
-       "std                                          0.103262   \n",
-       "min                                          0.000000   \n",
-       "25%                                          0.257667   \n",
-       "50%                                          0.319383   \n",
-       "75%                                          0.378539   \n",
-       "max                                          0.797768   \n",
-       "\n",
-       "       Air pollution - particulate matter raw value  \\\n",
-       "count                                   3052.000000   \n",
-       "mean                                       9.080505   \n",
-       "std                                        1.927073   \n",
-       "min                                        3.000000   \n",
-       "25%                                        7.800000   \n",
-       "50%                                        9.400000   \n",
-       "75%                                       10.400000   \n",
-       "max                                       19.700000   \n",
-       "\n",
-       "       Severe housing problems raw value  \\\n",
-       "count                        3081.000000   \n",
-       "mean                            0.142774   \n",
-       "std                             0.046461   \n",
-       "min                             0.030380   \n",
-       "25%                             0.113613   \n",
-       "50%                             0.138107   \n",
-       "75%                             0.164282   \n",
-       "max                             0.712166   \n",
-       "\n",
-       "       Percentage of households with overcrowding  \\\n",
-       "count                                 3081.000000   \n",
-       "mean                                     0.024194   \n",
-       "std                                      0.024036   \n",
-       "min                                      0.000000   \n",
-       "25%                                      0.012360   \n",
-       "50%                                      0.019114   \n",
-       "75%                                      0.028543   \n",
-       "max                                      0.519288   \n",
-       "\n",
-       "       Percentage of households with lack of kitchen or plumbing facilities  \\\n",
-       "count                                        3081.000000                      \n",
-       "mean                                            0.012432                      \n",
-       "std                                             0.016224                      \n",
-       "min                                             0.000000                      \n",
-       "25%                                             0.006641                      \n",
-       "50%                                             0.009801                      \n",
-       "75%                                             0.014493                      \n",
-       "max                                             0.376263                      \n",
-       "\n",
-       "       Driving alone to work raw value  \\\n",
-       "count                      3081.000000   \n",
-       "mean                          0.798331   \n",
-       "std                           0.071387   \n",
-       "min                           0.045849   \n",
-       "25%                           0.774278   \n",
-       "50%                           0.810557   \n",
-       "75%                           0.840497   \n",
-       "max                           0.960982   \n",
-       "\n",
-       "       Long commute - driving alone raw value  Life expectancy raw value  \\\n",
-       "count                             3081.000000                3061.000000   \n",
-       "mean                                 0.310414                  77.420786   \n",
-       "std                                  0.123433                   2.972095   \n",
-       "min                                  0.000000                  62.441612   \n",
-       "25%                                  0.217000                  75.487184   \n",
-       "50%                                  0.305000                  77.532488   \n",
-       "75%                                  0.395000                  79.267982   \n",
-       "max                                  0.845000                  97.965235   \n",
-       "\n",
-       "       Premature age-adjusted mortality raw value  \\\n",
-       "count                                 3081.000000   \n",
-       "mean                                   406.969458   \n",
-       "std                                    113.417050   \n",
-       "min                                    123.600000   \n",
-       "25%                                    327.600000   \n",
-       "50%                                    393.000000   \n",
-       "75%                                    476.300000   \n",
-       "max                                   1146.100000   \n",
-       "\n",
-       "       Frequent physical distress raw value  \\\n",
-       "count                           3081.000000   \n",
-       "mean                               0.120246   \n",
-       "std                                0.023201   \n",
-       "min                                0.069370   \n",
-       "25%                                0.102566   \n",
-       "50%                                0.117482   \n",
-       "75%                                0.135520   \n",
-       "max                                0.246185   \n",
-       "\n",
-       "       Frequent mental distress raw value  Diabetes prevalence raw value  \\\n",
-       "count                         3081.000000                    3081.000000   \n",
-       "mean                             0.122427                       0.116595   \n",
-       "std                              0.018844                       0.026016   \n",
-       "min                              0.080346                       0.033000   \n",
-       "25%                              0.108584                       0.098000   \n",
-       "50%                              0.121257                       0.115000   \n",
-       "75%                              0.134830                       0.134000   \n",
-       "max                              0.222063                       0.209000   \n",
-       "\n",
-       "       Food insecurity raw value  Limited access to healthy foods raw value  \\\n",
-       "count                3081.000000                                3062.000000   \n",
-       "mean                    0.137285                                   0.082372   \n",
-       "std                     0.041842                                   0.076339   \n",
-       "min                     0.037000                                   0.000000   \n",
-       "25%                     0.110000                                   0.035745   \n",
-       "50%                     0.132000                                   0.064471   \n",
-       "75%                     0.158000                                   0.104122   \n",
-       "max                     0.361000                                   0.718442   \n",
-       "\n",
-       "       Insufficient sleep raw value  Median household income raw value  \\\n",
-       "count                   3081.000000                        3081.000000   \n",
-       "mean                       0.331324                       51072.390782   \n",
-       "std                        0.041211                       13550.629873   \n",
-       "min                        0.230283                       22679.000000   \n",
-       "25%                        0.301977                       42247.000000   \n",
-       "50%                        0.330613                       48820.000000   \n",
-       "75%                        0.361455                       56696.000000   \n",
-       "max                        0.467078                      136191.000000   \n",
-       "\n",
-       "       Severe housing cost burden raw value  Population raw value  \\\n",
-       "count                           3081.000000          3.081000e+03   \n",
-       "mean                               0.115519          1.056966e+05   \n",
-       "std                                0.036755          3.360162e+05   \n",
-       "min                                0.027101          8.100000e+02   \n",
-       "25%                                0.090613          1.172700e+04   \n",
-       "50%                                0.110805          2.664600e+04   \n",
-       "75%                                0.135370          6.911500e+04   \n",
-       "max                                0.316407          1.016351e+07   \n",
-       "\n",
-       "       % below 18 years of age raw value  \n",
-       "count                        3081.000000  \n",
-       "mean                            0.222632  \n",
-       "std                             0.034139  \n",
-       "min                             0.071554  \n",
-       "25%                             0.202175  \n",
-       "50%                             0.222285  \n",
-       "75%                             0.239958  \n",
-       "max                             0.412419  "
-      ]
-     },
-     "execution_count": 49,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "df3.describe()"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 50,
-   "metadata": {
-    "Collapsed": "false"
-   },
-   "outputs": [],
-   "source": [
-    "df3.drop(['Alcohol-impaired driving deaths raw value', 'Premature age-adjusted mortality raw value', 'Life expectancy raw value'], axis =1,  inplace = True)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 51,
-   "metadata": {
-    "Collapsed": "false"
-   },
-   "outputs": [],
-   "source": [
-    "df4 = df3.dropna().groupby('State Abbreviation') [['Food environment index raw value',\"Flu vaccinations raw value\",'Air pollution - particulate matter raw value', 'High school graduation raw value','Limited access to healthy foods raw value']].median()\n",
-    "df4.reset_index(inplace = True)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 52,
-   "metadata": {
-    "Collapsed": "false"
-   },
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "Index(['State FIPS Code', 'County FIPS Code', '5-digit FIPS Code',\n",
-       "       'State Abbreviation', 'Name', 'Premature death raw value',\n",
-       "       'Poor or fair health raw value', 'Poor physical health days raw value',\n",
-       "       'Poor mental health days raw value', 'Adult smoking raw value',\n",
-       "       'Adult obesity raw value', 'Food environment index raw value_x',\n",
-       "       'Physical inactivity raw value', 'Excessive drinking raw value',\n",
-       "       'Flu vaccinations raw value_x', 'High school graduation raw value_x',\n",
-       "       'Some college raw value', 'Unemployment raw value',\n",
-       "       'Children in poverty raw value', 'Income inequality raw value',\n",
-       "       'Children in single-parent households raw value',\n",
-       "       'Air pollution - particulate matter raw value_x',\n",
-       "       'Severe housing problems raw value',\n",
-       "       'Percentage of households with overcrowding',\n",
-       "       'Percentage of households with lack of kitchen or plumbing facilities',\n",
-       "       'Driving alone to work raw value',\n",
-       "       'Long commute - driving alone raw value',\n",
-       "       'Frequent physical distress raw value',\n",
-       "       'Frequent mental distress raw value', 'Diabetes prevalence raw value',\n",
-       "       'Food insecurity raw value',\n",
-       "       'Limited access to healthy foods raw value_x',\n",
-       "       'Insufficient sleep raw value', 'Median household income raw value',\n",
-       "       'Severe housing cost burden raw value', 'Population raw value',\n",
-       "       '% below 18 years of age raw value'],\n",
-       "      dtype='object')"
-      ]
-     },
-     "execution_count": 52,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "df5 = df3.merge(df4, how = 'right', on = 'State Abbreviation')\n",
-    "df5['Food environment index raw value_x'].fillna(df5['Food environment index raw value_y'], inplace = True)\n",
-    "df5['Flu vaccinations raw value_x'].fillna(df5['Flu vaccinations raw value_y'], inplace = True)\n",
-    "df5['High school graduation raw value_x'].fillna(df5['High school graduation raw value_y'], inplace = True)\n",
-    "df5['Limited access to healthy foods raw value_x'].fillna(df5['Limited access to healthy foods raw value_y'], inplace = True)\n",
-    "\n",
-    "df5.drop(df5.columns[37:42], axis=1, inplace=True)\n",
-    "df5.columns"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 53,
-   "metadata": {
-    "Collapsed": "false"
-   },
-   "outputs": [],
-   "source": [
-    "X = df5.iloc[:,6:37]\n",
-    "Y = df5['Premature death raw value']\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 54,
-   "metadata": {
-    "Collapsed": "false"
-   },
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "LinearRegression(copy_X=True, fit_intercept=True, n_jobs=1, normalize=False)"
-      ]
-     },
-     "execution_count": 54,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "regr = linear_model.LinearRegression()\n",
-    "regr.fit(X, Y)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 55,
-   "metadata": {
-    "Collapsed": "false"
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "Intercept: \n",
-      " 2636.50133234074\n",
-      "Coefficients: \n",
-      " [-8.28931703e+03  1.38172972e+03 -6.92438949e+02  1.85158702e+04\n",
-      " -3.60820886e+03 -4.82038645e+02  3.96364353e+03 -7.67704490e+03\n",
-      " -1.62557015e+03  5.43238856e+02  3.40245242e+02  4.07341487e+03\n",
-      "  5.97850732e+03  4.20138768e+02  3.43206233e+03 -1.30928906e+02\n",
-      " -2.60164525e+03  9.40689291e+03 -1.06285493e+03  3.09030255e+03\n",
-      "  1.23843331e+03 -7.07271472e+04  6.41304810e+04  1.63393126e+04\n",
-      " -6.38493358e+03 -2.23751091e+03 -2.51304177e+03 -1.41006564e-02\n",
-      " -1.73998738e+03 -9.93348831e-05  8.57097020e+03]\n"
-     ]
-    }
-   ],
-   "source": [
-    "print('Intercept: \\n', regr.intercept_)\n",
-    "print('Coefficients: \\n', regr.coef_)\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 56,
-   "metadata": {
-    "Collapsed": "false"
-   },
-   "outputs": [
-    {
-     "name": "stdout",
-     "output_type": "stream",
-     "text": [
-      "                                OLS Regression Results                               \n",
-      "=====================================================================================\n",
-      "Dep. Variable:     Premature death raw value   R-squared:                       0.632\n",
-      "Model:                                   OLS   Adj. R-squared:                  0.629\n",
-      "Method:                        Least Squares   F-statistic:                     167.6\n",
-      "Date:                       Mon, 24 Feb 2020   Prob (F-statistic):               0.00\n",
-      "Time:                               15:19:11   Log-Likelihood:                -26923.\n",
-      "No. Observations:                       3052   AIC:                         5.391e+04\n",
-      "Df Residuals:                           3020   BIC:                         5.410e+04\n",
-      "Df Model:                                 31                                         \n",
-      "Covariance Type:                   nonrobust                                         \n",
-      "========================================================================================================================================\n",
-      "                                                                           coef    std err          t      P>|t|      [0.025      0.975]\n",
-      "----------------------------------------------------------------------------------------------------------------------------------------\n",
-      "const                                                                 2636.5013   6018.118      0.438      0.661   -9163.522    1.44e+04\n",
-      "Poor or fair health raw value                                        -8289.3170   2627.139     -3.155      0.002   -1.34e+04   -3138.156\n",
-      "Poor physical health days raw value                                   1381.7297    410.483      3.366      0.001     576.876    2186.583\n",
-      "Poor mental health days raw value                                     -692.4389    300.646     -2.303      0.021   -1281.931    -102.947\n",
-      "Adult smoking raw value                                               1.852e+04   1959.657      9.449      0.000    1.47e+04    2.24e+04\n",
-      "Adult obesity raw value                                              -3608.2089   1110.304     -3.250      0.001   -5785.237   -1431.181\n",
-      "Food environment index raw value_x                                    -482.0386    553.540     -0.871      0.384   -1567.393     603.316\n",
-      "Physical inactivity raw value                                         3963.6435   1087.046      3.646      0.000    1832.219    6095.068\n",
-      "Excessive drinking raw value                                         -7677.0449   1567.089     -4.899      0.000   -1.07e+04   -4604.374\n",
-      "Flu vaccinations raw value_x                                         -1625.5702    400.908     -4.055      0.000   -2411.650    -839.490\n",
-      "High school graduation raw value_x                                     543.2389    484.218      1.122      0.262    -406.192    1492.670\n",
-      "Some college raw value                                                 340.2452    432.403      0.787      0.431    -507.589    1188.079\n",
-      "Unemployment raw value                                                4073.4149   2632.549      1.547      0.122   -1088.354    9235.184\n",
-      "Children in poverty raw value                                         5978.5073    927.685      6.445      0.000    4159.548    7797.466\n",
-      "Income inequality raw value                                            420.1388     59.877      7.017      0.000     302.735     537.543\n",
-      "Children in single-parent households raw value                        3432.0623    492.265      6.972      0.000    2466.853    4397.271\n",
-      "Air pollution - particulate matter raw value_x                        -130.9289     22.387     -5.848      0.000    -174.824     -87.034\n",
-      "Severe housing problems raw value                                    -2601.6453   2219.610     -1.172      0.241   -6953.746    1750.456\n",
-      "Percentage of households with overcrowding                            9406.8929   3230.256      2.912      0.004    3073.170    1.57e+04\n",
-      "Percentage of households with lack of kitchen or plumbing facilities -1062.8549   3983.912     -0.267      0.790   -8874.309    6748.599\n",
-      "Driving alone to work raw value                                       3090.3026    612.472      5.046      0.000    1889.398    4291.207\n",
-      "Long commute - driving alone raw value                                1238.4333    306.097      4.046      0.000     638.253    1838.613\n",
-      "Frequent physical distress raw value                                 -7.073e+04    1.7e+04     -4.165      0.000   -1.04e+05   -3.74e+04\n",
-      "Frequent mental distress raw value                                    6.413e+04   1.38e+04      4.655      0.000    3.71e+04    9.11e+04\n",
-      "Diabetes prevalence raw value                                         1.634e+04   2555.263      6.394      0.000    1.13e+04    2.13e+04\n",
-      "Food insecurity raw value                                            -6384.9336   1.01e+04     -0.630      0.529   -2.63e+04    1.35e+04\n",
-      "Limited access to healthy foods raw value_x                          -2237.5109   5058.692     -0.442      0.658   -1.22e+04    7681.319\n",
-      "Insufficient sleep raw value                                         -2513.0418   1418.488     -1.772      0.077   -5294.342     268.259\n",
-      "Median household income raw value                                       -0.0141      0.005     -2.810      0.005      -0.024      -0.004\n",
-      "Severe housing cost burden raw value                                 -1739.9874   2226.497     -0.781      0.435   -6105.591    2625.616\n",
-      "Population raw value                                                 -9.933e-05      0.000     -0.939      0.348      -0.000       0.000\n",
-      "% below 18 years of age raw value                                     8570.9702   1265.289      6.774      0.000    6090.055    1.11e+04\n",
-      "==============================================================================\n",
-      "Omnibus:                     2097.903   Durbin-Watson:                   1.855\n",
-      "Prob(Omnibus):                  0.000   Jarque-Bera (JB):           136526.751\n",
-      "Skew:                           2.577   Prob(JB):                         0.00\n",
-      "Kurtosis:                      35.358   Cond. No.                     2.36e+08\n",
-      "==============================================================================\n",
-      "\n",
-      "Warnings:\n",
-      "[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.\n",
-      "[2] The condition number is large, 2.36e+08. This might indicate that there are\n",
-      "strong multicollinearity or other numerical problems.\n"
-     ]
-    },
-    {
-     "name": "stderr",
-     "output_type": "stream",
-     "text": [
-      "/anaconda3/lib/python3.6/site-packages/numpy/core/fromnumeric.py:2542: FutureWarning: Method .ptp is deprecated and will be removed in a future version. Use numpy.ptp instead.\n",
-      "  return ptp(axis=axis, out=out, **kwargs)\n"
-     ]
-    }
-   ],
-   "source": [
-    "X = sm.add_constant(X) # adding a constant\n",
-    " \n",
-    "model = sm.OLS(Y, X).fit()\n",
-    "predictions = model.predict(X) \n",
-    " \n",
-    "print_model = model.summary()\n",
-    "print(print_model)"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 57,
-   "metadata": {
-    "Collapsed": "false"
-   },
-   "outputs": [
-    {
-     "data": {
-      "text/plain": [
-       "[('Poor or fair health raw value', 255.34458110899274),\n",
-       " ('Poor physical health days raw value', 3021.1901827861407),\n",
-       " ('Poor mental health days raw value', 1618.7912960801707),\n",
-       " ('Adult smoking raw value', 143.29812035120017),\n",
-       " ('Adult obesity raw value', 145.78030867127012),\n",
-       " ('Food environment index raw value_x', 537.6747904278424),\n",
-       " ('Physical inactivity raw value', 91.7106562766045),\n",
-       " ('Excessive drinking raw value', 85.29339665920867),\n",
-       " ('Flu vaccinations raw value_x', 31.564883284516355),\n",
-       " ('High school graduation raw value_x', 205.676081090717),\n",
-       " ('Some college raw value', 72.10780161367407),\n",
-       " ('Unemployment raw value', 18.339256977990736),\n",
-       " ('Children in poverty raw value', 53.19082294457851),\n",
-       " ('Income inequality raw value', 84.57473207457191),\n",
-       " ('Children in single-parent households raw value', 31.726793241379614),\n",
-       " ('Air pollution - particulate matter raw value_x', 48.47993827557565),\n",
-       " ('Severe housing problems raw value', 120.41828112359069),\n",
-       " ('Percentage of households with overcrowding', 10.36370413806735),\n",
-       " ('Percentage of households with lack of kitchen or plumbing facilities',\n",
-       "  3.800122067659304),\n",
-       " ('Driving alone to work raw value', 271.89754961006867),\n",
-       " ('Long commute - driving alone raw value', 11.821741094408452),\n",
-       " ('Frequent physical distress raw value', 4849.235954530125),\n",
-       " ('Frequent mental distress raw value', 3266.3630763059273),\n",
-       " ('Diabetes prevalence raw value', 104.89220609163735),\n",
-       " ('Food insecurity raw value', 111.65544060654605),\n",
-       " ('Limited access to healthy foods raw value_x', 11.266053035600013),\n",
-       " ('Insufficient sleep raw value', 251.63317561431396),\n",
-       " ('Median household income raw value', 77.9245333781072),\n",
-       " ('Severe housing cost burden raw value', 81.819131779732),\n",
-       " ('Population raw value', 1.567842201533001),\n",
-       " ('% below 18 years of age raw value', 90.92081946384046)]"
-      ]
-     },
-     "execution_count": 57,
-     "metadata": {},
-     "output_type": "execute_result"
-    }
-   ],
-   "source": [
-    "X = df5.iloc[:,6:37]\n",
-    "vif = [variance_inflation_factor(X.values, i) for i in range(X.shape[1])]\n",
-    "list(zip(df5.iloc[:,6:37], vif))"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 58,
-   "metadata": {
-    "Collapsed": "false"
-   },
-   "outputs": [],
-   "source": [
-    "import statsmodels.api as sm\n",
-    "import scipy.stats as stats"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 59,
-   "metadata": {
-    "Collapsed": "false"
-   },
-   "outputs": [
-    {
-     "data": {
-      "image/png": "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\n",
-      "text/plain": [
-       "<Figure size 432x288 with 1 Axes>"
-      ]
-     },
-     "metadata": {
-      "needs_background": "light"
-     },
-     "output_type": "display_data"
-    }
-   ],
-   "source": [
-    "fig = sm.graphics.qqplot(model.resid, dist=stats.norm, line='45', fit=True)\n"
-   ]
-  },
-  {
-   "cell_type": "code",
    "execution_count": null,
-   "metadata": {
-    "Collapsed": "false"
-   },
+   "metadata": {},
    "outputs": [],
    "source": []
   }
@@ -12420,7 +10419,7 @@
    "name": "python",
    "nbconvert_exporter": "python",
    "pygments_lexer": "ipython3",
-   "version": "3.6.8"
+   "version": "3.6.6"
   }
  },
  "nbformat": 4,
