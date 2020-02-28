@@ -6,11 +6,11 @@ As a struggling US life insurance company, our goal is to increase revenues by 2
 
 ## Data structure and selection: 
 
-The dataset we used contained a wide ranging set of health ranking features per county within each state. This included data points such as premature deaths, low birthweight, adult smoking etc. As an intial step, we selected the premature death variable which is categorized as 
+The dataset we used contained a wide ranging set of health ranking features per county within each state. This included data points such as premature deaths, low birthweight, adult smoking etc. As an intial step, we selected the premature death as our dependent variable, what we aim to predict. This variable is categorized as Years Potential Life Loff (YPLL) - estimate of the average years a person would have lived if he or she had not died prematurely. It is a measure of premature mortality. 
 
-we decided to exclude columns with confidence interval and quantile to simplify our selection process and model application. 
-We subsequently ran a correlation matrix across all remaining variables and selected 31 variables with some form of positive or negative correlation and plausible causal relationsip with premature deaths. 
+We then decided to exclude columns with confidence interval and quantile to simplify our selection process and model application. We subsequently ran a correlation matrix across all remaining variables and selected 31 variables with some form of positive or negative correlation and plausible causal relationsip with premature deaths. We purposefully kept a wide range of correlation selection as to avoid missing possible related interactions which could help us predict our dependent variable.
 
+Some of our independent variables selected included: Adult Obesity, Food Environment Index, Physical Inactivity, Income inequality, Air Pollution.
 
 ## Findings:
 
