@@ -2,7 +2,11 @@
 
 ## Business Objective:
 
+As a struggling life insurance company, our goal is to increase revenues by 2% using a risk premium based on premature deaths per state. We aim to hike insurance contract prices across the states that pause the highest future risk of premature death rates. 
+
 ## Findings:
+
+
 
 ## Model:
 
