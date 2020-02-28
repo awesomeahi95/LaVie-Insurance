@@ -29,7 +29,11 @@ Using a z-score standard scaler method we took our poly-transformed data and sca
 
 To improve our coefficients and simplify our model we decided to run a series of regularisation tests using lasso, ridge and elastic net regressions with several alpha levels. We once again applied the 5-fold validation process to find the best R^2 value across model types with the optimal level. Our rationale at this point is to come back to our stakeholders and make sure the regression is as simple as possible to apply it in a business context. We selected a lasso model yielding an R^2 of 0.6454811 on the training set with an alpha level of 27. 
 
-Finally, we ran the model on the test set and got an R^2 of 0.681107 illustrating accuracy in our model. 
+Finally, we ran the model on the test set and got an R^2 of 0.681107 illustrating some accuracy in our model and a possibility to deploy it for our business application. 
+
+## Conclusion
+
+We believe our final model provides us enough prediction accuracy to implement the life insurance premium increase. We are aiming to perform this increase as a function of YPLL predictions scaled to the population size. This model should allow us not only to increase our revenues but to shift towards a more risk-adjusted revenue approach which we can replicate in the future. 
 
 ## Structure of Notebook:
 1)Imports
