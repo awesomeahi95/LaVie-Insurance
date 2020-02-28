@@ -27,7 +27,7 @@ We then proceeded to perform a polynomial transformation to our variables to fac
 
 Using a z-score standard scaler method we took our poly-transformed data and scaled it before applying the regularisation methods. 
 
-To improve our coefficients and simplify our model we decided to run 
+To improve our coefficients and simplify our model we decided to run a series of regularisation tests using lasso, ridge and elastic net regressions with several alpha levels. We once again applied the 5-fold validation process to find the best R^2 value across model types with the optimal level. Our rationale at this point is to come back to our stakeholders and make sure the regression is as simple as possible to apply it in a business context. 
 
 
 ## Structure of Notebook:
