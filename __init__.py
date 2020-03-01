@@ -5,15 +5,11 @@ import numpy as np
 import pandas as pd
 from sklearn import linear_model
 from sklearn.preprocessing import PolynomialFeatures
-from sklearn.metrics import r2_score
 from sklearn.linear_model import LinearRegression
 from sklearn.linear_model import Lasso
-from sklearn.metrics import mean_squared_error
 from sklearn.linear_model import Ridge
 from sklearn.linear_model import ElasticNet,ElasticNetCV
 from sklearn.model_selection import cross_validate
-from yellowbrick.datasets import load_concrete
-from yellowbrick.regressor import ResidualsPlot
 import warnings 
 from __init__ import *
 warnings.filterwarnings('ignore')
