@@ -65,7 +65,7 @@ Some of our independent variables selected included: Adult Obesity, Food Environ
 
 <h5 align="center">Correlation Heatmap</h5>
 <p align="center">
-  <img src="https://github.com/awesomeahi95/LaVie-Insurance/blob/master/Correlation_Heatmap.png" width=850>
+  <img src="https://github.com/awesomeahi95/LaVie-Insurance/blob/master/Correlation_Heatmap.png" width=600>
 </p>
 
 <a name="modelling"></a>
