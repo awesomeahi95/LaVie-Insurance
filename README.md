@@ -5,11 +5,11 @@ The primary goal of this project was to run and train statistical models and est
 ## Table of Contents
 
 1. [ File Descriptions ](#file_description)
-2. [ Strcuture ](#structure)
+2. [ Strucuture ](#structure)
 3. [ Executive Summary ](#executive_summary)
-  * [ Data Structure and Selection ](#data_structure_and_selection)
-  * [ Transformation, Scaling, Modelling, Regularisation ](#modelling)
-  * [ Conclusion ](#conclusion)
+   * [ Data Structure and Selection ](#data_structure_and_selection)
+   * [ Transformation, Scaling, Modelling, Regularisation ](#modelling)
+   * [ Conclusion ](#conclusion)
 
 <a name="file_description"></a>
 ## File Descriptions
@@ -22,28 +22,28 @@ The primary goal of this project was to run and train statistical models and est
 
 <a name="structure"></a>
 ## Structure of Notebook:
-1)Imports
+1. Imports
    - Importing Libraries
    - Importing Dataset
 
-2)EDA
+2. EDA
    - Early Exploration and Cleaning
    - Testing Homoscedasticity
    - Correlation Heatmap
 
-3)Modelling
+3. Modelling
    - Train Test Split
    - Linear
    - Quadratic
    - Cubic
    - Regularisation Using Regression Models
 
-4)Validation
+4. Validation
    - Regularisation Using Regression Models
    - Model Selection
    - Coefficients of Best Models
 
-5)Testing Final Model
+5. Testing Final Model
    - Lasso Model Test Data
    - Coefficient Weighting
 
