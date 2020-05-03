@@ -84,27 +84,30 @@ We then proceeded to perform a polynomial transformation to our variables to fac
 
 Using a z-score standard scaler method we took our poly-transformed data and scaled it before applying the regularisation methods. 
 
-To improve our coefficients and simplify our model we decided to run a series of regularisation technqiues using lasso, ridge and elastic net regressions with several alpha levels. In total we had 60 models with regularisation (20 Lasso, 20 Ridge, and 20 Elastic Net). We once again applied the 5-fold validation process to find the best R^2 value across model types with the optimal level. Our rationale at this point is to come back to our stakeholders and make sure the regression is as simple as possible to apply it in a business context. We selected a lasso model yielding an R^2 of 0.5241 on the training set with an alpha level of 47.373684. 
-
-Finally, we ran the model on the test set and got an R^2 of 0.5626 illustrating some accuracy in our model and a possibility to deploy it for our business application. 
+To improve our coefficients and simplify our model we decided to run a series of regularisation technqiues using lasso, ridge and elastic net regressions with several alpha levels. In total we had 60 models with regularisation (20 Lasso, 20 Ridge, and 20 Elastic Net). We once again applied the 5-fold validation process to find the best R^2 value across model types with the optimal level.
 
 <h5 align="center">Table Comparing Best Models</h5>
 <p align="center">
   <img src="https://github.com/awesomeahi95/LaVie-Insurance/blob/master/Best_Models_Table.png" width=850>
 </p>
 
-<h5 align="center">Table Comparing Best Models</h5>
+<h5 align="center">Bar Chart Comparing Best Models</h5>
 <p align="center">
   <img src="https://github.com/awesomeahi95/LaVie-Insurance/blob/master/Best_Models_BarChart.png" width=850>
 </p>
 
+Our rationale at this point is to come back to our stakeholders and make sure the regression is as simple as possible to apply it in a business context. We selected a lasso model yielding an R^2 of 0.5241 on the training set with an alpha level of 47.373684. 
+
+Finally, we ran the model on the test set and got an R^2 of 0.5626 illustrating some accuracy in our model and a possibility to deploy it for our business application. 
+
+<h5 align="center">Final Model Coefficients</h5>
+<p align="center">
+  <img src="https://github.com/awesomeahi95/LaVie-Insurance/blob/master/Best_Model_Coefs.png" width=450>
+</p>
+
+
 <a name="conclusion"></a>
 ### Conclusion
-
-<h5 align="center">Table Comparing Best Models</h5>
-<p align="center">
-  <img src="https://github.com/awesomeahi95/LaVie-Insurance/blob/master/Best_Model_Coefs.png" width=850>
-</p>
 
 We believe our final model provides us enough prediction accuracy to implement the life insurance premium increase. We are aiming to perform this increase as a function of YPLL predictions scaled to the population size. This model should allow us not only to increase our revenues but to shift towards a more risk-adjusted revenue approach which we can replicate in the future. 
 
