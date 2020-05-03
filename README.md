@@ -18,7 +18,7 @@ The primary goal of this project was to utilise machine learning methods includi
 - index.ipynb: notebook with data exploration, preprocessing, and modelling.
 - init.py: contains classes for linear regression, polynomials, and regularisation.
 - analytic_data2019.csv: data used for modelling.
-- model.pkl: final model saved using pickle.
+- final_model.pkl: final model saved using pickle.
 - Regression and Insurance.pdf: presentation summarising project process and findings
 
 <a name="structure"></a>
@@ -66,7 +66,7 @@ Some of our independent variables selected included: Diabetes prevalance raw val
 
 <h5 align="center">Correlation Heatmap of Remaining Variables</h5>
 <p align="center">
-  <img src="https://github.com/awesomeahi95/LaVie-Insurance/Images/blob/master/Correlation_Heatmap.png" width=600>
+  <img src="https://github.com/awesomeahi95/LaVie-Insurance/blob/master/Images/Correlation_Heatmap.png" width=600>
 </p>
 
 <a name="preprocessing"></a>
@@ -88,12 +88,12 @@ To improve our coefficients and simplify our model we decided to run a series of
 
 <h5 align="center">Table Comparing Best Models</h5>
 <p align="center">
-  <img src="https://github.com/awesomeahi95/LaVie-Insurance/Images/blob/master/Best_Models_Table.png" width=850>
+  <img src="https://github.com/awesomeahi95/LaVie-Insurance/blob/master/Images/Best_Models_Table.png" width=850>
 </p>
 
 <h5 align="center">Bar Chart Comparing Best Models</h5>
 <p align="center">
-  <img src="https://github.com/awesomeahi95/LaVie-Insurance/Images/blob/master/Best_Models_BarChart.png" width=850>
+  <img src="https://github.com/awesomeahi95/LaVie-Insurance/blob/master/Images/Best_Models_BarChart.png" width=850>
 </p>
 
 Our rationale at this point is to come back to our stakeholders and make sure the regression is as simple as possible to apply it in a business context. We selected a lasso model yielding an R^2 of 0.5241 on the training set with an alpha level of 47.373684. 
@@ -102,12 +102,12 @@ Finally, we ran the model on the test set and got an R^2 of 0.5626 illustrating 
 
 <h5 align="center">Final Model Coefficients</h5>
 <p align="center">
-  <img src="https://github.com/awesomeahi95/LaVie-Insurance/Images/blob/master/Best_Model_Coefs.png" width=450>
+  <img src="https://github.com/awesomeahi95/LaVie-Insurance/blob/master/Images/Best_Model_Coefs.png" width=450>
 </p>
 
 <h5 align="center">Final Model Residuals Plot</h5>
 <p align="center">
-  <img src="https://github.com/awesomeahi95/LaVie-Insurance/Images/blob/master/Residuals_of_best_model.png" width=450>
+  <img src="https://github.com/awesomeahi95/LaVie-Insurance/blob/master/Images/Residuals_of_best_model.png" width=450>
 </p>
 
 
