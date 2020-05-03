@@ -7,7 +7,7 @@ The primary goal of this project was to utilise machine learning methods includi
 1. [ File Descriptions ](#file_description)
 2. [ Strucuture ](#structure)
 3. [ Executive Summary ](#executive_summary)
-   * [ Data Structure and Selection ](#data_structure_and_selection)
+   * [ Data Cleaning and Feature Engineering ](#data_structure_and_selection)
    * [ Preprocessing ](#preprocessing) 
    * [ Modelling ](#modelling)
    * [ Conclusion ](#conclusion)
