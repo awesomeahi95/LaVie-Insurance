@@ -118,3 +118,4 @@ Finally, we ran the model on the test set and got an R^2 of 0.5626 illustrating 
 
 We believe our final model provides us enough prediction accuracy to implement the life insurance premium increase. We are aiming to perform this increase as a function of YPLL predictions scaled to the population size. This model should allow us not only to increase our revenues but to shift towards a more risk-adjusted revenue approach which we can replicate in the future. 
 
+
