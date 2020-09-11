@@ -13,7 +13,7 @@ The primary goal of this project was to utilise machine learning methods includi
    * [ Conclusion ](#conclusion)
 
 <a name="file_description"></a>
-## File Descriptions
+## File Description
 
 - Images: folder containing images of some tables and plots used in README.md
 - index.ipynb: notebook with data exploration, preprocessing, and modelling.
