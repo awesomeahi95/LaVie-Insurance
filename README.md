@@ -20,7 +20,7 @@ The primary goal of this project was to utilise machine learning methods includi
 - init.py: contains classes for linear regression, polynomials, and regularisation.
 - analytic_data2019.csv: data used for modelling.
 - final_model.pkl: final model saved using pickle.
-- Regression and Insurance.pdf: presentation summarising project process and findings
+- Regression and Insurance.pdf: presentation summarising project process and findings 
 
 
 <a name="structure"></a>
